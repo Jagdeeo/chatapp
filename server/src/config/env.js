@@ -12,6 +12,11 @@ const env = {
   CLIENT_URL: process.env.CLIENT_URL || "http://localhost:5173",
 
   NODE_ENV: process.env.NODE_ENV || "development",
+
+  RESEND_API_KEY: process.env.RESEND_API_KEY,
+
+  RESEND_FROM_EMAIL:
+    process.env.RESEND_FROM_EMAIL || "ChatApp <onboarding@resend.dev>",
 };
 
 
@@ -23,6 +28,10 @@ if (!env.MONGO_URI) {
 
 if (!env.JWT_SECRET) {
   throw new Error("JWT_SECRET is missing in .env");
+}
+
+if (!env.RESEND_API_KEY) {
+  throw new Error("RESEND_API_KEY is missing in .env");
 }
 
 

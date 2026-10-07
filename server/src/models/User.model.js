@@ -45,6 +45,35 @@ const userSchema = new mongoose.Schema(
       maxlength: [150, "Bio cannot exceed 150 characters"],
     },
 
+    // ==================== EMAIL VERIFICATION ====================
+
+    emailVerified: {
+      type: Boolean,
+      default: false,
+    },
+
+    emailOtpHash: {
+      type: String,
+      default: null,
+    },
+
+    emailOtpExpiresAt: {
+      type: Date,
+      default: null,
+    },
+
+    emailOtpAttempts: {
+      type: Number,
+      default: 0,
+    },
+
+    emailOtpLastSentAt: {
+      type: Date,
+      default: null,
+    },
+
+    // ==================== ONLINE STATUS ====================
+
     isOnline: {
       type: Boolean,
       default: false,
