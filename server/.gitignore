@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Uploaded files
+uploads/*
+!uploads/.gitkeep
+
+# Temporary files
+tmp/
+temp/
+
+# Coverage
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db
