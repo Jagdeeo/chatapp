@@ -16,9 +16,7 @@ export const sendMessage = async (req, res) => {
 
     // Check message for text messages
     if (
-      (!message || message.trim() === "") &&
-      (!fileUrl || fileUrl.trim() === "")
-    ) {
+      (!message || message.trim() === "") && (!fileUrl || fileUrl.trim() === "")) {
       return res.status(400).json({
         success: false,
         message: "Message or file is required",
@@ -124,8 +122,9 @@ export const getMessages = async (req, res) => {
 // ==================== GET SINGLE MESSAGE ====================
 export const getMessageById = async (req, res) => {
   try {
+    console.log('hi');
     const { id } = req.params;
-
+  console.log(id);
     const message = await Message.findById(id)
       .populate("sender", "fullname username profilePic")
       .populate("receiver", "fullname username profilePic");
