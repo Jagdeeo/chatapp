@@ -33,14 +33,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 
-/* -------------------- TEST ROUTE -------------------- */
-
-app.get("/", (req, res) => {
-  res.status(200).json({
-    success: true,
-    message: "Chat API is running",
-  });
-});
 
 
 /* -------------------- API ROUTES -------------------- */
