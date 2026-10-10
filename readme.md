@@ -1,7 +1,7 @@
 Chat app
 
 Backend Structure
-__________________________________________________
+___________________________________________________
 server/
 │
 ├── src/
@@ -48,3 +48,39 @@ server/
 ├── .env.example
 ├── .gitignore
 └── package.json
+
+
+Frontend Structure 
+_______________________________________________________________________________
+client/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── common/
+│   │   ├── layout/
+│   │   ├── chat/
+│   │   └── forms/
+│   ├── context/
+│   ├── hooks/
+│   ├── layouts/
+│   ├── pages/
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   ├── VerifyOTP.jsx
+│   │   ├── Chats.jsx
+│   │   ├── Profile.jsx
+│   │   └── NotFound.jsx
+│   ├── routes/
+│   ├── services/
+│   │   └── api.js
+│   ├── utils/
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── .env
+├── .gitignore
+├── package.json
+└── README.md
+
+

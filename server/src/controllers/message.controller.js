@@ -122,9 +122,8 @@ export const getMessages = async (req, res) => {
 // ==================== GET SINGLE MESSAGE ====================
 export const getMessageById = async (req, res) => {
   try {
-    console.log('hi');
+  
     const { id } = req.params;
-  console.log(id);
     const message = await Message.findById(id)
       .populate("sender", "fullname username profilePic")
       .populate("receiver", "fullname username profilePic");
